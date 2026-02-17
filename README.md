@@ -1,4 +1,4 @@
-# 打标器（Labeler Web）
+﻿# 打标器（Labeler Web）
 
 一个基于 Node.js + Express 的本地化图像打标工具，内置：
 
@@ -51,44 +51,6 @@ node server.js
 ```bash
 PORT=30101 npm start
 ```
-
----
-
-## 一键部署（无 Docker）
-
-项目已提供三端独立的一键部署脚本：
-
-- Linux：`deploy/deploy-linux.sh`
-- macOS：`deploy/deploy-macos.sh`
-- Windows：`deploy/deploy-windows.bat`
-
-根目录也有快捷入口：
-
-- `deploy-linux.sh`
-- `deploy-macos.sh`
-- `deploy-windows.bat`
-
-### Linux（systemd 用户服务）
-
-```bash
-bash deploy-linux.sh
-```
-
-### macOS（LaunchAgent）
-
-```bash
-bash deploy-macos.sh
-```
-
-### Windows（登录自启）
-
-双击运行：
-
-```text
-deploy-windows.bat
-```
-
-> 详细命令见 `DEPLOY.md`
 
 ---
 
@@ -151,11 +113,12 @@ npx pkg server.js --targets node18-win-x64 --output dist/labeler-web.exe
 .
 ├── server.js                # 后端服务入口
 ├── public/                  # 前端页面与脚本样式
-├── deploy/                  # 三端部署脚本
 ├── dist/                    # 打包产物目录
 ├── data.default.json        # 默认数据模板
 ├── data.json                # 运行时配置与状态
-├── DEPLOY.md                # 部署细节说明
+├── package.json
+├── package-lock.json
+├── start.sh
 └── README.md
 ```
 
